@@ -1,0 +1,16 @@
+language: php
+
+php:
+  - 5.6
+  - 7.0
+  - 7.1
+
+notifications:
+  email:
+    - s.dieunidou@gmail.com
+
+before_script:
+    - wget http://getcomposer.org/composer.phar
+    - php composer.phar install
+
+sudo: false
