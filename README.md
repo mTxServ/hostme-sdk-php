@@ -41,3 +41,17 @@ $config = [
     'platform_endpoint' => 'https://.../api/',        
 ];
 ```
+
+# Brige Symfony
+
+```
+services:
+    app.token_authenticator:
+        class: HostMe\Brige\Symfony\Security\Guard\TokenAuthenticator
+
+    app.token_provider:
+        class: HostMe\Brige\Symfony\Security\Provider\TokenProvider
+        arguments:
+            - "%user.endpoint%"
+
+```
