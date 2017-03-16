@@ -8,7 +8,7 @@ The **HostMe SDK for PHP** enables PHP developers to easily integrate our API in
 # Install
 We recommend Composer for managing dependencies. Installing is as easy as:
 
-    $ composer require "hostme/sdk-php:1.0.*@dev"
+    $ composer require "hostme/php-sdk:1.0.*@dev"
 
 # Usage
 
