@@ -55,3 +55,30 @@ services:
             - "%user.endpoint%"
 
 ```
+
+```
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        token:
+            id: app.token_provider
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: ~
+            logout: ~
+            guard:
+                authenticators:
+                    - app.token_authenticator
+            stateless: true
+
+    access_control:
+        - { path: ^/, roles: [ ROLE_API ] }
+```
