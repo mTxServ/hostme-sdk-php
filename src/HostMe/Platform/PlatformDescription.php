@@ -24,22 +24,22 @@ final class PlatformDescription extends Description
                 // Public Ips
                 'getPublicIps' => [
                     'httpMethod' => 'GET',
-                    'uri' => 'publicips.json',
+                    'uri' => 'public_ips.json',
                     'responseModel' => 'getResponse',
+                    'additionalParameters' => [
+                        'location' => 'query',
+                    ],
                 ],
 
                 'getPublicIp' => [
                     'httpMethod' => 'GET',
-                    'uri' => 'publicips/{id}.json',
+                    'uri' => 'public_ips/{id}.json',
                     'responseModel' => 'getResponse',
                     'parameters' => [
                         'id' => [
                             'location' => 'uri',
                             'required' => true,
                         ],
-                    ],
-                    'additionalParameters' => [
-                        'location' => 'query',
                     ],
                 ],
 
@@ -48,6 +48,9 @@ final class PlatformDescription extends Description
                     'httpMethod' => 'GET',
                     'uri' => 'privateips.json',
                     'responseModel' => 'getResponse',
+                    'additionalParameters' => [
+                        'location' => 'query',
+                    ],
                 ],
 
                 'getPrivateIp' => [
