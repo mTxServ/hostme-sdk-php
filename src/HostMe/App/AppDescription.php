@@ -45,7 +45,7 @@ final class AppDescription extends Description
 
                 'clearApplications' => [
                     'httpMethod' => 'DELETE',
-                    'uri' => 'applications.json',
+                    'uri' => 'applications/clear.json',
                     'responseModel' => 'getResponse',
                     'parameters' => [
                         'serverId' => [
