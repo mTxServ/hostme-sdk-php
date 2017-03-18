@@ -2,7 +2,7 @@
 
 namespace HostMe;
 
-use GuzzleHttp\Command\Guzzle\GuzzleClient;
+use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\ClientException;
 use HostMe\Exception\AuthenficaitionFailedException;
 use HostMe\Exception\EmptyAccessTokenException;
