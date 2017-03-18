@@ -62,6 +62,16 @@ class Auth
     }
 
     /**
+     * @return $this
+     */
+    public function resetAccessToken()
+    {
+        $this->accessToken = null;
+
+        return $this;
+    }
+
+    /**
      * @throws AuthenficaitionFailedException
      * @throws EmptyAccessTokenException
      *

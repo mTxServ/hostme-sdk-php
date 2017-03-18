@@ -38,10 +38,14 @@ class TokenProvider implements UserProviderInterface
      */
     public function loadUserByUsername($username)
     {
+        $this->client->getAuth()->setAccessToken($username);
+
         $me = $this->client->getUser()->me()->toArray();
         if (!empty($me['id']) && !empty($me['roles'])) {
             return new User($me['id'], $me['id'], $me['roles']);
         }
+
+        $this->client->getAuth()->resetAccessToken($username);
 
         throw new UsernameNotFoundException(
             sprintf('Authentification failed.')
