@@ -54,8 +54,17 @@ services:
     app.token_provider:
         class: HostMe\Brige\Symfony\Security\Provider\TokenProvider
         arguments:
-            - "%user.endpoint%"
+            - "%user.oauth.oauth_endpoint%"
 
+    app.hostme:
+        class: HostMe\Client
+        arguments:
+            -
+                oauth:
+                    - oauth_endpoint: "%user.oauth.oauth_endpoint%"
+                    - client_id: "%user.oauth.client_id%"
+                    - client_secret: "%user.oauth.client_secret%"
+                    - api_key: "%user.oauth.api_key%"
 ```
 
 In security :
