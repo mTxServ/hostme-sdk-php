@@ -114,4 +114,12 @@ class Client
     {
         return $this->platform;
     }
+
+    /**
+     * @return Auth
+     */
+    public function getAuth()
+    {
+        return $this->auth;
+    }
 }
