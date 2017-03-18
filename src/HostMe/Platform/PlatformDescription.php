@@ -46,7 +46,7 @@ final class PlatformDescription extends Description
                 // Private Ips
                 'getPrivateIps' => [
                     'httpMethod' => 'GET',
-                    'uri' => 'privateips.json',
+                    'uri' => 'private_ips.json',
                     'responseModel' => 'getResponse',
                     'additionalParameters' => [
                         'location' => 'query',
@@ -55,7 +55,7 @@ final class PlatformDescription extends Description
 
                 'getPrivateIp' => [
                     'httpMethod' => 'GET',
-                    'uri' => 'privateips/{id}.json',
+                    'uri' => 'private_ips/{id}.json',
                     'responseModel' => 'getResponse',
                     'parameters' => [
                         'id' => [
