@@ -73,6 +73,11 @@ final class AppDescription extends Description
                             'location' => 'json',
                             'required' => false,
                         ],
+                        'components' => [
+                            'type' => 'array',
+                            'location' => 'json',
+                            'required' => false,
+                        ],
                     ],
                 ],
 
