@@ -76,7 +76,7 @@ class Client
     }
 
     /**
-     * @return UserClient
+     * @return UserResource
      */
     public function getUser()
     {
