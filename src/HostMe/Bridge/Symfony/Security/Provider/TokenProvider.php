@@ -38,12 +38,9 @@ class TokenProvider implements UserProviderInterface
      */
     public function loadUserByUsername($username)
     {
-        $userData = $this->client->getUser()->me()->toArray();
-        if (false !== $userData) {
-            $userData = json_decode($userData, true);
-            if (!empty($userData['id']) && !empty($userData['roles'])) {
-                return new User($userData['id'], $userData['id'], $userData['roles']);
-            }
+        $me = $this->client->getUser()->me()->toArray();
+        if (!empty($me['id']) && !empty($me['roles'])) {
+            return new User($me['id'], $me['id'], $me['roles']);
         }
 
         throw new UsernameNotFoundException(
