@@ -67,7 +67,7 @@ final class TaskDescription extends Description
 
                 'setOutput' => [
                     'httpMethod' => 'PUT',
-                    'uri' => 'tasks/{id}.json',
+                    'uri' => 'tasks/{id}/output.json',
                     'responseModel' => 'getResponse',
                     'parameters' => [
                         'id' => [
@@ -84,7 +84,7 @@ final class TaskDescription extends Description
 
                 'markSuccess' => [
                     'httpMethod' => 'PUT',
-                    'uri' => 'tasks/{id}/markSuccess',
+                    'uri' => 'tasks/{id}/markSuccess.{_format}',
                     'responseModel' => 'getResponse',
                     'parameters' => [
                         'id' => [
@@ -96,7 +96,7 @@ final class TaskDescription extends Description
 
                 'markError' => [
                     'httpMethod' => 'PUT',
-                    'uri' => 'tasks/{id}/markError',
+                    'uri' => 'tasks/{id}/markError.{_format}',
                     'responseModel' => 'getResponse',
                     'parameters' => [
                         'id' => [
@@ -108,7 +108,7 @@ final class TaskDescription extends Description
 
                 'markProcessing' => [
                     'httpMethod' => 'PUT',
-                    'uri' => 'tasks/{id}/markProcessing',
+                    'uri' => 'tasks/{id}/markProcessing.{_format}',
                     'responseModel' => 'getResponse',
                     'parameters' => [
                         'id' => [
