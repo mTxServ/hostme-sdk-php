@@ -26,9 +26,7 @@ final class UserDescription extends Description
                     'uri' => 'clients.json',
                     'responseModel' => 'getResponse',
                     'additionalParameters' => [
-                        'user' => [
-                            'location' => 'uri',
-                        ],
+                        'location' => 'query',
                     ],
                 ],
 

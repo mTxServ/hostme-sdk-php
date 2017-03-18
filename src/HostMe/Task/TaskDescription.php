@@ -26,12 +26,7 @@ final class TaskDescription extends Description
                     'uri' => 'tasks.json',
                     'responseModel' => 'getResponse',
                     'additionalParameters' => [
-                        'serverId' => [
-                            'location' => 'uri',
-                        ],
-                        'status' => [
-                            'location' => 'uri',
-                        ],
+                        'location' => 'query',
                     ],
                 ],
 

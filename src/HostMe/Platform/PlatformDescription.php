@@ -39,9 +39,7 @@ final class PlatformDescription extends Description
                         ],
                     ],
                     'additionalParameters' => [
-                        'ip' => [
-                            'location' => 'uri',
-                        ],
+                        'location' => 'query',
                     ],
                 ],
 
