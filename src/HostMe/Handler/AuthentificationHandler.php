@@ -49,8 +49,6 @@ class AuthentificationHandler
         $preparedParams = \GuzzleHttp\Psr7\build_query(array_merge([
             'access_token' => $this->accessToken,
         ], $queryparams));
-        $request->withUri($request->getUri()->withQuery($preparedParams));
-
-        return $request;
+        return $request->withUri($request->getUri()->withQuery($preparedParams));
     }
 }
