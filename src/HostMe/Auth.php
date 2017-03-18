@@ -50,6 +50,18 @@ class Auth
     }
 
     /**
+     * @param string $accessToken
+     *
+     * @return $this
+     */
+    public function setAccessToken($accessToken)
+    {
+        $this->accessToken = $accessToken;
+
+        return $this;
+    }
+
+    /**
      * @throws AuthenficaitionFailedException
      * @throws EmptyAccessTokenException
      *
