@@ -44,6 +44,8 @@ $config = [
 
 # Brige Symfony
 
+Services Definitions :
+
 ```
 services:
     app.token_authenticator:
@@ -56,17 +58,19 @@ services:
 
 ```
 
+In security :
+
 ```
-# To get started with security, check out the documentation:
-# http://symfony.com/doc/current/book/security.html
 security:
-    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
         token:
             id: app.token_provider
 
+    role_hierarchy:
+        ROLE_API:         ROLE_USER
+        ROLE_ADMIN:       ROLE_API
+
     firewalls:
-        # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
