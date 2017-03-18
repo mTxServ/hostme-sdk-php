@@ -26,6 +26,9 @@ final class AppDescription extends Description
                     'httpMethod' => 'GET',
                     'uri' => 'applications.json',
                     'responseModel' => 'getResponse',
+                    'additionalParameters' => [
+                        'location' => 'query',
+                    ],
                 ],
 
                 'getApplication' => [
@@ -73,6 +76,9 @@ final class AppDescription extends Description
                     'httpMethod' => 'GET',
                     'uri' => 'components.json',
                     'responseModel' => 'getResponse',
+                    'additionalParameters' => [
+                        'location' => 'query',
+                    ],
                 ],
 
                 'getComponent' => [
@@ -111,6 +117,41 @@ final class AppDescription extends Description
                             'type' => 'string',
                             'location' => 'json',
                             'required' => false,
+                        ],
+                    ],
+                ],
+
+                // Scans
+                'getScans' => [
+                    'httpMethod' => 'GET',
+                    'uri' => 'scans.json',
+                    'responseModel' => 'getResponse',
+                    'additionalParameters' => [
+                        'location' => 'query',
+                    ],
+                ],
+
+                'getScan' => [
+                    'httpMethod' => 'GET',
+                    'uri' => 'scans/{id}.json',
+                    'responseModel' => 'getResponse',
+                    'parameters' => [
+                        'id' => [
+                            'location' => 'uri',
+                            'required' => true,
+                        ],
+                    ],
+                ],
+
+                'newScan' => [
+                    'httpMethod' => 'POST',
+                    'uri' => '/scans.json',
+                    'responseModel' => 'getResponse',
+                    'parameters' => [
+                        'serverId' => [
+                            'type' => 'string',
+                            'location' => 'json',
+                            'required' => true,
                         ],
                     ],
                 ],
