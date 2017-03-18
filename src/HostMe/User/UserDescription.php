@@ -21,6 +21,12 @@ final class UserDescription extends Description
             'name' => 'User API',
 
             'operations' => [
+                'me' => [
+                    'httpMethod' => 'GET',
+                    'uri' => 'me.json',
+                    'responseModel' => 'getResponse',
+                ],
+
                 'getClients' => [
                     'httpMethod' => 'GET',
                     'uri' => 'clients.json',

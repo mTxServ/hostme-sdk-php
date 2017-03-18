@@ -3,6 +3,7 @@
 namespace HostMe\Brige\Symfony\Security\Provider;
 
 use HostMe\Brige\Symfony\Security\Model\User;
+use HostMe\Client;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -14,18 +15,18 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
 class TokenProvider implements UserProviderInterface
 {
     /**
-     * @var string
+     * @var Client
      */
-    private $endpoint;
+    private $client;
 
     /**
      * TokenProvider constructor.
      *
-     * @param string $endpoint
+     * @param Client $client
      */
-    public function __construct($endpoint)
+    public function __construct(Client $client)
     {
-        $this->endpoint = $endpoint;
+        $this->client = $client;
     }
 
     /**
@@ -37,8 +38,7 @@ class TokenProvider implements UserProviderInterface
      */
     public function loadUserByUsername($username)
     {
-        $userData = @file_get_contents(sprintf('%s?access_token=%s', $this->endpoint, $username));
-
+        $userData = $this->client->getUser()->me()->toArray();
         if (false !== $userData) {
             $userData = json_decode($userData, true);
             if (!empty($userData['id']) && !empty($userData['roles'])) {
