@@ -58,6 +58,11 @@ final class AppDescription extends Description
                             'location' => 'json',
                             'required' => true,
                         ],
+                        'description' => [
+                            'type' => 'string',
+                            'location' => 'json',
+                            'required' => false,
+                        ],
                         'rootPath' => [
                             'type' => 'string',
                             'location' => 'json',
