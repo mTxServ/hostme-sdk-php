@@ -54,7 +54,7 @@ services:
     app.token_provider:
         class: HostMe\Brige\Symfony\Security\Provider\TokenProvider
         arguments:
-            - "%user.endpoint%"
+            - "@app.hostme"
 
     app.hostme:
         class: HostMe\Client
