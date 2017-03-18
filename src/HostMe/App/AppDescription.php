@@ -69,7 +69,7 @@ final class AppDescription extends Description
                             'required' => true,
                         ],
                         'data' => [
-                            'type' => 'string',
+                            'type' => 'array',
                             'location' => 'json',
                             'required' => false,
                         ],
@@ -119,7 +119,7 @@ final class AppDescription extends Description
                             'required' => false,
                         ],
                         'data' => [
-                            'type' => 'string',
+                            'type' => 'array',
                             'location' => 'json',
                             'required' => false,
                         ],
