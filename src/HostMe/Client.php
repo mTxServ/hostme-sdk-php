@@ -62,8 +62,8 @@ class Client
             ],
             'box_endpoint' => 'http://box-dev.hostme.fr:83/app_dev.php/',
             'user_endpoint' => 'http://user-dev.hostme.fr:82/app_dev.php/',
-            'app_endpoint' => 'http://app-dev.hostme.fr:82/app_dev.php/',
-            'task_endpoint' => 'http://task-dev.hostme.fr:82/app_dev.php/',
+            'app_endpoint' => 'http://app-dev.hostme.fr:85/app_dev.php/',
+            'task_endpoint' => 'http://task-dev.hostme.fr:81/app_dev.php/',
             'platform_endpoint' => 'http://hostme.docker:8080/app_dev.php/api/',
         ], $config);
 
