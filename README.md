@@ -61,10 +61,10 @@ services:
         arguments:
             -
                 oauth:
-                    - oauth_endpoint: "%user.oauth.oauth_endpoint%"
-                    - client_id: "%user.oauth.client_id%"
-                    - client_secret: "%user.oauth.client_secret%"
-                    - api_key: "%user.oauth.api_key%"
+                    oauth_endpoint: "%user.oauth.oauth_endpoint%"
+                    client_id: "%user.oauth.client_id%"
+                    client_secret: "%user.oauth.client_secret%"
+                    api_key: "%user.oauth.api_key%"
 ```
 
 In security :
