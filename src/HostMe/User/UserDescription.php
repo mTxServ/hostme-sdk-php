@@ -23,13 +23,13 @@ final class UserDescription extends Description
             'operations' => [
                 'me' => [
                     'httpMethod' => 'GET',
-                    'uri' => 'me.json',
+                    'uri' => '/users/me.json',
                     'responseModel' => 'getResponse',
                 ],
 
                 'getClients' => [
                     'httpMethod' => 'GET',
-                    'uri' => 'clients.json',
+                    'uri' => '/users/oauth_clients.json',
                     'responseModel' => 'getResponse',
                     'additionalParameters' => [
                         'location' => 'query',
@@ -38,7 +38,7 @@ final class UserDescription extends Description
 
                 'getClient' => [
                     'httpMethod' => 'GET',
-                    'uri' => 'clients/{id}.json',
+                    'uri' => '/users/oauth_clients/{id}.json',
                     'responseModel' => 'getResponse',
                     'parameters' => [
                         'id' => [
@@ -50,7 +50,7 @@ final class UserDescription extends Description
 
                 'newClient' => [
                     'httpMethod' => 'POST',
-                    'uri' => '/clients.json',
+                    'uri' => '/users/oauth_clients.json',
                     'responseModel' => 'getResponse',
                     'parameters' => [
                         'name' => [
