@@ -29,7 +29,7 @@ final class UserDescription extends Description
 
                 'getClients' => [
                     'httpMethod' => 'GET',
-                    'uri' => 'users/oauth_clients.json',
+                    'uri' => 'oauth_clients.json',
                     'responseModel' => 'getResponse',
                     'additionalParameters' => [
                         'location' => 'query',
