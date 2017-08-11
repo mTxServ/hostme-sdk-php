@@ -55,13 +55,13 @@ class Client
     {
         $config = array_merge([
             'oauth' => [
-                'oauth_endpoint' => 'https://user.hostme.fr/oauth/v2/token',
+                'oauth_endpoint' => 'https://hostme.fr/oauth/v2/token',
                 'client_id' => '123',
                 'client_secret' => 's$cr$t',
                 'api_key' => 's$cr$t123',
             ],
             'box_endpoint' => 'https://box.hostme.fr/',
-            'user_endpoint' => 'https://user.hostme.fr/',
+            'user_endpoint' => 'https://hostme.fr/api/',
             'app_endpoint' => 'https://app.hostme.fr/',
             'task_endpoint' => 'https://task.hostme.fr/',
             'platform_endpoint' => 'https://hostme.fr/api/',
