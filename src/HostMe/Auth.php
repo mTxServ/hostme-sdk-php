@@ -30,7 +30,7 @@ class Auth
     public function __construct(array $config = [])
     {
         $this->config = array_merge([
-            'oauth_endpoint' => 'http://user-dev.hostme.fr:82/app_dev.php/oauth/v2/token',
+            'oauth_endpoint' => 'https://hostme.fr/oauth/v2/token',
             'client_id' => '123',
             'client_secret' => 's$cr$t',
             'api_key' => 's$cr$t123',
