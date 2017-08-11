@@ -55,16 +55,16 @@ class Client
     {
         $config = array_merge([
             'oauth' => [
-                'oauth_endpoint' => 'http://user-dev.hostme.fr:82/app_dev.php/oauth/v2/token',
+                'oauth_endpoint' => 'https://user.hostme.fr/oauth/v2/token',
                 'client_id' => '123',
                 'client_secret' => 's$cr$t',
                 'api_key' => 's$cr$t123',
             ],
-            'box_endpoint' => 'http://box-dev.hostme.fr:83/app_dev.php/',
-            'user_endpoint' => 'http://user-dev.hostme.fr:82/app_dev.php/',
-            'app_endpoint' => 'http://app-dev.hostme.fr:85/app_dev.php/',
-            'task_endpoint' => 'http://task-dev.hostme.fr:81/app_dev.php/',
-            'platform_endpoint' => 'http://hostme.docker:8080/app_dev.php/api/',
+            'box_endpoint' => 'https://box.hostme.fr/',
+            'user_endpoint' => 'https://user.hostme.fr/',
+            'app_endpoint' => 'https://app.hostme.fr/',
+            'task_endpoint' => 'https://task.hostme.fr/',
+            'platform_endpoint' => 'https://hostme.fr/api/',
         ], $config);
 
         $this->auth = new Auth($config['oauth']);
